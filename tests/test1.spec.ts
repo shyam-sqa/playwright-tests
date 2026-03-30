@@ -9,4 +9,7 @@ test("test1",async ({page})=>{
     
     await expect(page).toHaveTitle("Automation Testing Practice")
     await page.pause()
+
+    expect(page.url()).toBe("https://testautomationpractice.blogspot.com/")
+
 })
