@@ -7,20 +7,44 @@ test.beforeEach(async({page})=>{
     await form.page.goto("https://www.qaplayground.com/practice/forms")
 })
 const data={
-            fname: 'Peter',
-            lname: 'Sutherland',
-            email: 'peter.sutherland@gmail.com',
+            fname: 'John',
+            lname: 'Smith',
+            email: 'john.smith@gmail.com',
             phone: "5555555555",
             dob: '2000-01-20',
-            gender: 'female',
+            gender: 'Male',
             country: 'USA',
             city: 'Columbus',
-            about: 'I am QA',
+            about: 'Enthusiastic customer service specialist with 9 years of experience in high-volume retail environments. Proven ability to improve customer satisfaction scores and manage inventory efficiently. Strong interpersonal skills and a commitment to delivering exceptional service',
             interest: ['Playwright'],
             password: '123456',
             confirmPassword: '123456',
         }
+
+
 test.describe("Form Validations",()=>{
+
+     async function expectForEmpty(){
+        await expect(form.firstName).toHaveValue('')
+        await expect(form.lastName).toHaveValue('')
+        await expect(form.email).toHaveValue('')
+        await expect(form.phone).toHaveValue('')
+        await expect(form.dob).toHaveValue('')
+        await expect(form.page.getByTestId('radio-gender-male')).not.toBeChecked()
+        await expect(form.page.getByTestId('radio-gender-female')).not.toBeChecked()
+        await expect(form.page.getByTestId('radio-gender-other')).not.toBeChecked()
+        await expect(form.city).toHaveValue('')
+        await expect(form.about).toHaveValue('')
+        await expect(form.password).toHaveValue('')
+        await expect(form.confirmPassword).toHaveValue('')
+        await expect(form.page.getByTestId('select-country')).toContainText('Select country')
+        await expect(form.terms).not.toBeChecked()
+        await expect(form.seleniumCheckbox).not.toBeChecked()
+        await expect(form.playwrightCheckbox).not.toBeChecked()
+        await expect(form.cypressCheckbox).not.toBeChecked()
+        await expect(form.appiumCheckbox).not.toBeChecked()
+        await expect(form.jestCheckbox).not.toBeChecked()    
+    }
     test("Fill all fields with valid data and submit successfully",async()=>{
         await form.fillDetails(data)
         await form.terms.click()
@@ -85,33 +109,53 @@ test.describe("Form Validations",()=>{
     test("Verify reset button clears all fields",async()=>{
         await form.fillDetails(data)
         await form.reset.click()
-        await expect(form.firstName).toHaveValue('')
-        await expect(form.lastName).toHaveValue('')
-        await expect(form.email).toHaveValue('')
-        await expect(form.phone).toHaveValue('')
-        await expect(form.dob).toHaveValue('')
-        await expect(form.page.getByTestId('radio-gender-male')).not.toBeChecked()
-        await expect(form.page.getByTestId('radio-gender-female')).not.toBeChecked()
-        await expect(form.page.getByTestId('radio-gender-other')).not.toBeChecked()
-        await expect(form.city).toHaveValue('')
-        await expect(form.about).toHaveValue('')
-        await expect(form.password).toHaveValue('')
-        await expect(form.confirmPassword).toHaveValue('')
-        await expect(form.page.getByTestId('select-country')).toContainText('Select country')
-        await expect(form.terms).not.toBeChecked()
-        await expect(form.seleniumCheckbox).not.toBeChecked()
-        await expect(form.playwrightCheckbox).not.toBeChecked()
-        await expect(form.cypressCheckbox).not.toBeChecked()
-        await expect(form.appiumCheckbox).not.toBeChecked()
-        await expect(form.jestCheckbox).not.toBeChecked()
+        await expectForEmpty()
     })
 
+    test("Verify gender radio button selection",async()=>{
+        await form.page.getByTestId('radio-gender-male').check()
+        await expect(form.page.getByTestId('radio-gender-male')).toBeChecked()
+        await expect(form.page.getByTestId('radio-gender-female')).not.toBeChecked()
+        await expect(form.page.getByTestId('radio-gender-other')).not.toBeChecked()
 
+    })
 
+    test("Verify country dropdown selection",async()=>{
+        await expect(form.country).toBeVisible()
+        await form.country.click();
+        await form.page.getByRole('option', { name: 'USA' }).click();
+        await expect(form.country).toContainText('USA')
+    })
 
+    test("Verify multiple interest checkboxes can be selected",async()=>{
+        await expect(form.interests).toBeVisible()
+        const data={
+            interest: ['Playwright', 'Cypress']
+        }   
+        await form.fillDetails(data);
+        await expect(form.playwrightCheckbox).toBeChecked()
+        await expect(form.cypressCheckbox).toBeChecked()
+    })
 
+    test("Verify form fields retain values after validation failure",async()=>{
+        const data={
+            fname: 'John',
+            lname: 'Smith',
+            email: 'johnsmith@gmail.com'
+        }
+        await form.fillDetails(data)
+        await form.submit.click()
+        await expect(form.firstName).toHaveValue(data.fname)
+        await expect(form.lastName).toHaveValue(data.lname)
+        await expect(form.email).toHaveValue(data.email)
+    })
 
-
+    test("Verify Fill Again button returns to empty form from success state",async()=>{
+        await form.fillDetails(data)
+        await form.submit.click()
+        await form.fillAgain.click()
+        await expectForEmpty()
+    })
     
 })
 

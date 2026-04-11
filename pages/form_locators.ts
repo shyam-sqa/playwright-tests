@@ -21,6 +21,7 @@ export class formLocators{
     readonly cypressCheckbox: Locator
     readonly appiumCheckbox: Locator
     readonly jestCheckbox: Locator
+    readonly fillAgain: Locator
 
 
     constructor(page:Page){
@@ -40,43 +41,14 @@ export class formLocators{
         this.submit = page.getByTestId('submit-form-btn')
         this.reset = page.getByTestId('reset-form-btn')
         this.seleniumCheckbox = page.getByTestId('checkbox-interest-selenium')
-        this.playwrightCheckbox = page.getByTestId('checkbox-interest-selenium')
-        this.cypressCheckbox = page.getByTestId('checkbox-interest-selenium')
-        this.appiumCheckbox = page.getByTestId('checkbox-interest-selenium')
-        this.jestCheckbox = page.getByTestId('checkbox-interest-selenium')
-
-
-
-
+        this.playwrightCheckbox = page.getByTestId('checkbox-interest-playwright')
+        this.cypressCheckbox = page.getByTestId('checkbox-interest-cypress')
+        this.appiumCheckbox = page.getByTestId('checkbox-interest-appium')
+        this.jestCheckbox = page.getByTestId('checkbox-interest-jest')
+        this.fillAgain = page.getByTestId('reset-form-btn')
     }
 
-    /*async fillDetails(data:any | number){
-        await this.firstName.fill(data.fname);
-        await this.lastName.fill(data.lname);
-        await this.email.fill(data.email);
-        await this.phone.fill(data.phone);
-        await this.dob.fill(data.dob);
-        if(data.gender === 'Male'){
-            await this.page.getByTestId('radio-gender-male').check();
-        }else if(data.gender === 'Female'){
-            await this.page.getByTestId('radio-gender-female').check();
-        }else{
-            await this.page.getByTestId('radio-gender-other').check();
-        }
-        await this.country.click()
-        await this.page.getByRole('option',{name:data.country}).click()
-        await this.city.fill(data.city);
-        if(data.about){
-            await this.about.fill(data.about);
-        }  
-        if(data.interest){
-            for(let item of data.interest){
-                await this.interests.getByLabel(item).check();
-            }
-        }
-        await this.password.fill(data.password);
-        await this.confirmPassword.fill(data.confirmPassword)
-    }*/
+    
 
     async fillDetails(data:any){
         const actions: Record<string, Function> = {
