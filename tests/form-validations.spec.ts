@@ -45,7 +45,7 @@ test.describe("Form Validations",()=>{
         await expect(form.appiumCheckbox).not.toBeChecked()
         await expect(form.jestCheckbox).not.toBeChecked()    
     }
-    test("Fill all fields with valid data and submit successfully",async()=>{
+    test("Fill all fields with valid data and submit successfully",{tag:'@smoke'},async()=>{
         await form.fillDetails(data)
         await form.terms.click()
         await form.submit.click()
@@ -53,7 +53,7 @@ test.describe("Form Validations",()=>{
 
     })
 
-    test("Verify required field errors appear on empty submit",async()=>{
+    test("Verify required field errors appear on empty submit",{tag:'@smoke'},async()=>{
         await expect(form.submit).toBeVisible()
         await form.submit.click()
         await expect(form.page.getByTestId('error-first-name')).toHaveText('First name is required.')
@@ -69,7 +69,7 @@ test.describe("Form Validations",()=>{
         await expect(form.page.getByTestId('error-terms')).toHaveText('You must accept the terms.')
     })
 
-    test("Verify invalid email format shows validation error",async()=>{
+    test("Verify invalid email format shows validation error",{tag:'@smoke'},async()=>{
         await expect(form.email).toBeVisible()
         await form.email.fill('test')
         await form.submit.click()
@@ -90,7 +90,7 @@ test.describe("Form Validations",()=>{
         await expect(form.page.getByTestId('error-password')).toHaveText('Password must be at least 6 characters.')
     })
 
-    test("Verify password mismatch shows confirm password error",async()=>{
+    test("Verify password mismatch shows confirm password error",{tag:'@smoke'},async()=>{
         await expect(form.confirmPassword).toBeVisible()
         await form.password.fill('123456')
         await form.confirmPassword.fill('1234')
@@ -98,7 +98,7 @@ test.describe("Form Validations",()=>{
         await expect(form.page.getByTestId('error-confirm-password')).toHaveText('Passwords do not match.')
     })
 
-    test("Verify success message displays submitted name",async()=>{
+    test("Verify success message displays submitted name",{tag:'@smoke'},async()=>{
         await form.fillDetails(data)
         await form.terms.click()
         await form.submit.click()
