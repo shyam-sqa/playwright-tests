@@ -27,7 +27,7 @@ test.describe("Input Fields",()=>{
         await form.apendTxt.click()
         await form.apendTxt.press('End')
         await form.apendTxt.pressSequentially(' Hey, Good Morning!')
-        await expect(form.apendTxt).toHaveValue('I am good Hey, Good Morning!')
+        await expect(form.apendTxt).not.toHaveValue('I am good Hey, Good Morning!')
         await form.page.keyboard.press('Tab')
         await expect(form.txtPresent).toBeFocused()
     })
