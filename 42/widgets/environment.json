@@ -1,0 +1,1 @@
+[{"values":["shyam-sqa"],"name":"Executor"},{"values":["main"],"name":"Branch"},{"values":["test: trigger intentional failure to verify Slack alerting logic"],"name":"Commit"},{"values":["GitHub_Actions_Ubuntu"],"name":"Environment"}]
