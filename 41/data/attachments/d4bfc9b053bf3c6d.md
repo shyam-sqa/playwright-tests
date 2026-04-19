@@ -1,0 +1,553 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link "QA PlayGround - Automation Testing Practice Platform QA PlayGround" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]:
+          - img "QA PlayGround - Automation Testing Practice Platform" [ref=e7]
+          - generic [ref=e8]: QA PlayGround
+      - navigation "Main navigation" [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Study Tracker (New feature)" [ref=e11] [cursor=pointer]:
+          - /url: /study-tracker/dashboard
+          - text: Study Tracker
+          - generic "(New feature)" [ref=e12]: New
+        - link "Bank Demo" [ref=e13] [cursor=pointer]:
+          - /url: /bank
+        - link "Practice" [ref=e14] [cursor=pointer]:
+          - /url: /practice
+        - link "QA Tools" [ref=e15] [cursor=pointer]:
+          - /url: /qa-tools
+        - link "Blog" [ref=e16] [cursor=pointer]:
+          - /url: /blog
+        - generic [ref=e17]:
+          - button "Toggle theme" [ref=e18] [cursor=pointer]:
+            - img
+            - generic [ref=e19]: Toggle theme
+          - link "Login" [ref=e20] [cursor=pointer]:
+            - /url: /login
+  - main [ref=e21]:
+    - generic [ref=e25]:
+      - navigation "Breadcrumb" [ref=e26]:
+        - link "Home" [ref=e27] [cursor=pointer]:
+          - /url: /
+        - img [ref=e28]
+        - link "Practice" [ref=e30] [cursor=pointer]:
+          - /url: /practice
+        - img [ref=e31]
+        - generic [ref=e33]: How to Handle Dropdowns using Select Class in Selenium and Playwright
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - img [ref=e39]
+              - text: Beginner
+            - generic [ref=e42]:
+              - img [ref=e43]
+              - text: 12 min
+            - generic [ref=e46]:
+              - img [ref=e47]
+              - text: 4 scenarios
+          - heading "Dropdown Automation Practice" [level=1] [ref=e50]
+          - paragraph [ref=e51]: Master dropdown interactions in Selenium & Playwright — select by visible text, select by value, retrieve all options, and handle multi-select elements.
+        - generic [ref=e52]:
+          - region "Dropdown practice exercises" [ref=e53]:
+            - generic [ref=e56]:
+              - generic [ref=e57]:
+                - generic [ref=e58]:
+                  - generic [ref=e59]: "Scenario 1: Select by Visible Text"
+                  - img [ref=e60]
+                - paragraph [ref=e62]: Select “Apple” from the fruit dropdown using visible text.
+                - combobox "Fruit dropdown" [ref=e63] [cursor=pointer]:
+                  - generic: Select Fruit
+                  - img [ref=e64]
+              - separator [ref=e66]
+              - generic [ref=e67]:
+                - generic [ref=e68]:
+                  - generic [ref=e69]: "Scenario 2: Select by Value Attribute"
+                  - img [ref=e70]
+                - paragraph [ref=e72]:
+                  - text: Select “India” using its
+                  - code [ref=e73]: value
+                  - text: attribute, not visible text.
+                - combobox "Country dropdown" [ref=e74] [cursor=pointer]:
+                  - generic: Select Country
+                  - img [ref=e75]
+              - separator [ref=e77]
+              - generic [ref=e78]:
+                - generic [ref=e79]:
+                  - generic [ref=e80]: "Scenario 3: Select Last Option & Get All Options"
+                  - img [ref=e81]
+                - paragraph [ref=e83]: Select the last programming language, then retrieve all available options.
+                - combobox "Programming language dropdown" [ref=e84] [cursor=pointer]:
+                  - generic: Select Language
+                  - img [ref=e85]
+              - separator [ref=e87]
+              - generic [ref=e88]:
+                - generic [ref=e89]:
+                  - generic [ref=e90]: "Scenario 4: Multi-Select (CTRL + Click)"
+                  - img [ref=e91]
+                - paragraph [ref=e93]: Hold Ctrl and click to select multiple superheroes.
+                - listbox "Multi-select superheroes" [ref=e94]:
+                  - option "Ant-Man" [ref=e95]
+                  - option "Aquaman" [ref=e96]
+                  - option "The Avengers" [ref=e97]
+                  - option "Batman" [ref=e98]
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - paragraph [ref=e102]: What You'll Learn
+                - img [ref=e103]
+              - generic [ref=e106]:
+                - generic [ref=e107]:
+                  - button "Selenium (Java)" [ref=e108] [cursor=pointer]
+                  - button "Playwright (JS/PY)" [ref=e109] [cursor=pointer]
+                - generic [ref=e110]:
+                  - paragraph [ref=e111]: Selenium (Java)
+                  - list [ref=e112]:
+                    - listitem [ref=e113]:
+                      - generic [ref=e115]: Select.selectByVisibleText()
+                    - listitem [ref=e116]:
+                      - generic [ref=e118]: Select.selectByValue()
+                    - listitem [ref=e119]:
+                      - generic [ref=e121]: Select.getOptions()
+                    - listitem [ref=e122]:
+                      - generic [ref=e124]: Select.getAllSelectedOptions()
+                    - listitem [ref=e125]:
+                      - generic [ref=e127]: Select.deselectAll()
+              - generic [ref=e128]:
+                - img [ref=e129]
+                - generic [ref=e132]: Tutorial video coming soon
+            - generic [ref=e133]:
+              - paragraph [ref=e134]: Up Next
+              - link "Practice Data Table automation — next element" [ref=e135] [cursor=pointer]:
+                - /url: /practice/data-table
+                - img [ref=e137]
+                - generic [ref=e138]:
+                  - paragraph [ref=e139]: Data Table
+                  - paragraph [ref=e140]: Practice reading, sorting, and filtering table data
+                - img [ref=e141]
+        - generic [ref=e143]:
+          - heading "Test Cases" [level=2] [ref=e144]
+          - generic [ref=e145]:
+            - 'heading "TC01: Select ''Apple'' from fruit dropdown by visible text" [level=3] [ref=e147]':
+              - 'button "TC01: Select ''Apple'' from fruit dropdown by visible text" [ref=e148] [cursor=pointer]':
+                - generic [ref=e149]: "TC01: Select 'Apple' from fruit dropdown by visible text"
+                - img [ref=e150]
+            - 'heading "TC02: Select ''India'' from country dropdown by value attribute" [level=3] [ref=e153]':
+              - 'button "TC02: Select ''India'' from country dropdown by value attribute" [ref=e154] [cursor=pointer]':
+                - generic [ref=e155]: "TC02: Select 'India' from country dropdown by value attribute"
+                - img [ref=e156]
+            - 'heading "TC03: Verify selected value is displayed after selection" [level=3] [ref=e159]':
+              - 'button "TC03: Verify selected value is displayed after selection" [ref=e160] [cursor=pointer]':
+                - generic [ref=e161]: "TC03: Verify selected value is displayed after selection"
+                - img [ref=e162]
+            - 'heading "TC04: Get all available options from the programming language dropdown" [level=3] [ref=e165]':
+              - 'button "TC04: Get all available options from the programming language dropdown" [ref=e166] [cursor=pointer]':
+                - generic [ref=e167]: "TC04: Get all available options from the programming language dropdown"
+                - img [ref=e168]
+            - 'heading "TC05: Select the last option from the programming language dropdown" [level=3] [ref=e171]':
+              - 'button "TC05: Select the last option from the programming language dropdown" [ref=e172] [cursor=pointer]':
+                - generic [ref=e173]: "TC05: Select the last option from the programming language dropdown"
+                - img [ref=e174]
+            - 'heading "TC06: Multi-select: select multiple superheroes using CTRL+click" [level=3] [ref=e177]':
+              - 'button "TC06: Multi-select: select multiple superheroes using CTRL+click" [ref=e178] [cursor=pointer]':
+                - generic [ref=e179]: "TC06: Multi-select: select multiple superheroes using CTRL+click"
+                - img [ref=e180]
+            - 'heading "TC07: Multi-select: deselect a previously selected option" [level=3] [ref=e183]':
+              - 'button "TC07: Multi-select: deselect a previously selected option" [ref=e184] [cursor=pointer]':
+                - generic [ref=e185]: "TC07: Multi-select: deselect a previously selected option"
+                - img [ref=e186]
+            - 'heading "TC08: Verify default placeholder text before any selection" [level=3] [ref=e189]':
+              - 'button "TC08: Verify default placeholder text before any selection" [ref=e190] [cursor=pointer]':
+                - generic [ref=e191]: "TC08: Verify default placeholder text before any selection"
+                - img [ref=e192]
+            - 'heading "TC09: Verify a dropdown is enabled and interactable" [level=3] [ref=e195]':
+              - 'button "TC09: Verify a dropdown is enabled and interactable" [ref=e196] [cursor=pointer]':
+                - generic [ref=e197]: "TC09: Verify a dropdown is enabled and interactable"
+                - img [ref=e198]
+            - 'heading "TC10: Verify the total count of options in the country dropdown" [level=3] [ref=e201]':
+              - 'button "TC10: Verify the total count of options in the country dropdown" [ref=e202] [cursor=pointer]':
+                - generic [ref=e203]: "TC10: Verify the total count of options in the country dropdown"
+                - img [ref=e204]
+      - article [ref=e206]:
+        - generic [ref=e207]:
+          - heading "Introduction" [level=2] [ref=e208]
+          - paragraph [ref=e209]:
+            - text: HTML
+            - code [ref=e210]: "`<select>`"
+            - text: "dropdowns are handled differently across frameworks:"
+          - list [ref=e211]:
+            - listitem [ref=e212]:
+              - strong [ref=e213]: Selenium
+              - text: provides a dedicated
+              - code [ref=e214]: "`Select`"
+              - text: helper class
+            - listitem [ref=e215]:
+              - strong [ref=e216]: Playwright
+              - text: uses
+              - code [ref=e217]: "`selectOption()`"
+              - text: with flexible matchers
+            - listitem [ref=e218]:
+              - text: Both support
+              - strong [ref=e219]: single-select
+              - text: and
+              - strong [ref=e220]: multi-select
+              - text: dropdowns
+          - paragraph [ref=e221]: "Common scenarios:"
+          - list [ref=e222]:
+            - listitem [ref=e223]: Select by visible text
+            - listitem [ref=e224]: Select by index
+            - listitem [ref=e225]: Select by value attribute
+            - listitem [ref=e226]: Get all available options
+            - listitem [ref=e227]: Get the currently selected option
+            - listitem [ref=e228]: Multi-select
+          - heading "Key Methods Summary" [level=2] [ref=e229]
+          - table [ref=e230]:
+            - rowgroup [ref=e231]:
+              - row "Action Selenium (Java) Playwright (JS) Playwright (Python)" [ref=e232]:
+                - columnheader "Action" [ref=e233]
+                - columnheader "Selenium (Java)" [ref=e234]
+                - columnheader "Playwright (JS)" [ref=e235]
+                - columnheader "Playwright (Python)" [ref=e236]
+            - rowgroup [ref=e237]:
+              - 'row "By visible text `selectByVisibleText(\"text\")` `selectOption({ label: \"text\" })` `select_option(label=\"text\")`" [ref=e238]':
+                - cell "By visible text" [ref=e239]
+                - 'cell "`selectByVisibleText(\"text\")`" [ref=e240]':
+                  - code [ref=e241]: "`selectByVisibleText(\"text\")`"
+                - 'cell "`selectOption({ label: \"text\" })`" [ref=e242]':
+                  - code [ref=e243]: "`selectOption({ label: \"text\" })`"
+                - 'cell "`select_option(label=\"text\")`" [ref=e244]':
+                  - code [ref=e245]: "`select_option(label=\"text\")`"
+              - 'row "By index `selectByIndex(n)` `selectOption({ index: n })` `select_option(index=n)`" [ref=e246]':
+                - cell "By index" [ref=e247]
+                - 'cell "`selectByIndex(n)`" [ref=e248]':
+                  - code [ref=e249]: "`selectByIndex(n)`"
+                - 'cell "`selectOption({ index: n })`" [ref=e250]':
+                  - code [ref=e251]: "`selectOption({ index: n })`"
+                - 'cell "`select_option(index=n)`" [ref=e252]':
+                  - code [ref=e253]: "`select_option(index=n)`"
+              - 'row "By value `selectByValue(\"val\")` `selectOption(\"val\")` `select_option(\"val\")`" [ref=e254]':
+                - cell "By value" [ref=e255]
+                - 'cell "`selectByValue(\"val\")`" [ref=e256]':
+                  - code [ref=e257]: "`selectByValue(\"val\")`"
+                - 'cell "`selectOption(\"val\")`" [ref=e258]':
+                  - code [ref=e259]: "`selectOption(\"val\")`"
+                - 'cell "`select_option(\"val\")`" [ref=e260]':
+                  - code [ref=e261]: "`select_option(\"val\")`"
+              - 'row "Get selected `getFirstSelectedOption().getText()` `inputValue()` `input_value()`" [ref=e262]':
+                - cell "Get selected" [ref=e263]
+                - 'cell "`getFirstSelectedOption().getText()`" [ref=e264]':
+                  - code [ref=e265]: "`getFirstSelectedOption().getText()`"
+                - 'cell "`inputValue()`" [ref=e266]':
+                  - code [ref=e267]: "`inputValue()`"
+                - 'cell "`input_value()`" [ref=e268]':
+                  - code [ref=e269]: "`input_value()`"
+              - 'row "Get all options `getOptions()` `locator(\"option\").allTextContents()` `locator(\"option\").all_text_contents()`" [ref=e270]':
+                - cell "Get all options" [ref=e271]
+                - 'cell "`getOptions()`" [ref=e272]':
+                  - code [ref=e273]: "`getOptions()`"
+                - 'cell "`locator(\"option\").allTextContents()`" [ref=e274]':
+                  - code [ref=e275]: "`locator(\"option\").allTextContents()`"
+                - 'cell "`locator(\"option\").all_text_contents()`" [ref=e276]':
+                  - code [ref=e277]: "`locator(\"option\").all_text_contents()`"
+          - separator [ref=e278]
+          - heading "1. Select by visible text" [level=2] [ref=e279]
+          - heading "Selenium (Java)" [level=3] [ref=e280]
+          - figure [ref=e281]:
+            - code [ref=e283]:
+              - generic [ref=e284]: Select select = new Select(driver.findElement(By.id("fruitSelect")));
+              - generic [ref=e285]: select.selectByVisibleText("Apple");
+              - generic [ref=e286]: assertEquals("Apple", select.getFirstSelectedOption().getText());
+              - button "Copy code" [ref=e287] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e289]
+          - figure [ref=e290]:
+            - code [ref=e292]:
+              - generic [ref=e293]: "await page.locator(\"#fruitSelect\").selectOption({ label: \"Apple\" });"
+              - generic [ref=e294]: await expect(page.locator("#fruitSelect")).toHaveValue("apple");
+              - button "Copy code" [ref=e295] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e297]
+          - figure [ref=e298]:
+            - code [ref=e300]:
+              - generic [ref=e301]: page.locator("#fruitSelect").select_option(label="Apple")
+              - generic [ref=e302]: expect(page.locator("#fruitSelect")).to_have_value("apple")
+              - button "Copy code" [ref=e303] [cursor=pointer]
+          - separator [ref=e305]
+          - heading "2. Select by index" [level=2] [ref=e306]
+          - heading "Selenium (Java)" [level=3] [ref=e307]
+          - figure [ref=e308]:
+            - code [ref=e310]:
+              - generic [ref=e311]: Select select = new Select(driver.findElement(By.id("languageSelect")));
+              - generic [ref=e312]: select.selectByIndex(2); // selects the 3rd option (0-based)
+              - generic [ref=e313]: System.out.println(select.getFirstSelectedOption().getText());
+              - button "Copy code" [ref=e314] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e316]
+          - figure [ref=e317]:
+            - code [ref=e319]:
+              - generic [ref=e320]: "await page.locator(\"#languageSelect\").selectOption({ index: 2 });"
+              - generic [ref=e321]: const value = await page.locator("#languageSelect").inputValue();
+              - generic [ref=e322]: console.log(value);
+              - button "Copy code" [ref=e323] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e325]
+          - figure [ref=e326]:
+            - code [ref=e328]:
+              - generic [ref=e329]: page.locator("#languageSelect").select_option(index=2)
+              - generic [ref=e330]: value = page.locator("#languageSelect").input_value()
+              - generic [ref=e331]: print(value)
+              - button "Copy code" [ref=e332] [cursor=pointer]
+          - separator [ref=e334]
+          - heading "3. Select by value attribute" [level=2] [ref=e335]
+          - heading "Selenium (Java)" [level=3] [ref=e336]
+          - figure [ref=e337]:
+            - code [ref=e339]:
+              - generic [ref=e340]: Select select = new Select(driver.findElement(By.id("countrySelect")));
+              - generic [ref=e341]: select.selectByValue("india");
+              - generic [ref=e342]: assertEquals("India", select.getFirstSelectedOption().getText());
+              - button "Copy code" [ref=e343] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e345]
+          - figure [ref=e346]:
+            - code [ref=e348]:
+              - generic [ref=e349]: await page.locator("#countrySelect").selectOption("india");
+              - generic [ref=e350]: await expect(page.locator("#countrySelect")).toHaveValue("india");
+              - button "Copy code" [ref=e351] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e353]
+          - figure [ref=e354]:
+            - code [ref=e356]:
+              - generic [ref=e357]: page.locator("#countrySelect").select_option("india")
+              - generic [ref=e358]: expect(page.locator("#countrySelect")).to_have_value("india")
+              - button "Copy code" [ref=e359] [cursor=pointer]
+          - separator [ref=e361]
+          - heading "4. Get all available options" [level=2] [ref=e362]
+          - heading "Selenium (Java)" [level=3] [ref=e363]
+          - figure [ref=e364]:
+            - code [ref=e366]:
+              - generic [ref=e367]: Select select = new Select(driver.findElement(By.id("languageSelect")));
+              - generic [ref=e368]: List<WebElement> options = select.getOptions();
+              - generic [ref=e369]: "for (WebElement opt : options) {"
+              - generic [ref=e370]: System.out.println(opt.getText());
+              - generic [ref=e371]: "}"
+              - generic [ref=e372]: "System.out.println(\"Total options: \" + options.size());"
+              - button "Copy code" [ref=e373] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e375]
+          - figure [ref=e376]:
+            - code [ref=e378]:
+              - generic [ref=e379]: const options = await page.locator("#languageSelect option").allTextContents();
+              - generic [ref=e380]: console.log(options); // ["Python", "Java", "JavaScript"]
+              - button "Copy code" [ref=e381] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e383]
+          - figure [ref=e384]:
+            - code [ref=e386]:
+              - generic [ref=e387]: options = page.locator("#languageSelect option").all_text_contents()
+              - generic [ref=e388]: print(options)
+              - button "Copy code" [ref=e389] [cursor=pointer]
+          - separator [ref=e391]
+          - heading "5. Verify currently selected option" [level=2] [ref=e392]
+          - heading "Selenium (Java)" [level=3] [ref=e393]
+          - figure [ref=e394]:
+            - code [ref=e396]:
+              - generic [ref=e397]: Select select = new Select(driver.findElement(By.id("countrySelect")));
+              - generic [ref=e398]: String selected = select.getFirstSelectedOption().getText();
+              - generic [ref=e399]: assertEquals("Argentina", selected);
+              - button "Copy code" [ref=e400] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e402]
+          - figure [ref=e403]:
+            - code [ref=e405]:
+              - generic [ref=e406]: await expect(page.locator("#countrySelect")).toHaveValue("argentina");
+              - button "Copy code" [ref=e407] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e409]
+          - figure [ref=e410]:
+            - code [ref=e412]:
+              - generic [ref=e413]: expect(page.locator("#countrySelect")).to_have_value("argentina")
+              - button "Copy code" [ref=e414] [cursor=pointer]
+          - separator [ref=e416]
+          - heading "6. Multi-select dropdown" [level=2] [ref=e417]
+          - heading "Selenium (Java)" [level=3] [ref=e418]
+          - figure [ref=e419]:
+            - code [ref=e421]:
+              - generic [ref=e422]: Select multiSelect = new Select(driver.findElement(By.id("heroSelect")));
+              - generic [ref=e423]: assertTrue(multiSelect.isMultiple());
+              - generic [ref=e425]: multiSelect.selectByVisibleText("Batman");
+              - generic [ref=e426]: multiSelect.selectByVisibleText("Aquaman");
+              - generic [ref=e428]: List<WebElement> selected = multiSelect.getAllSelectedOptions();
+              - generic [ref=e429]: assertEquals(2, selected.size());
+              - button "Copy code" [ref=e430] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e432]
+          - figure [ref=e433]:
+            - code [ref=e435]:
+              - generic [ref=e436]: await page.locator("#heroSelect").selectOption([
+              - generic [ref=e437]: "{ label: \"Batman\" },"
+              - generic [ref=e438]: "{ label: \"Aquaman\" }"
+              - generic [ref=e439]: "]);"
+              - generic [ref=e440]: const selected = await page.locator("#heroSelect option:checked").count();
+              - generic [ref=e441]: expect(selected).toBe(2);
+              - button "Copy code" [ref=e442] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e444]
+          - figure [ref=e445]:
+            - code [ref=e447]:
+              - generic [ref=e448]: page.locator("#heroSelect").select_option([
+              - generic [ref=e449]: "{\"label\": \"Batman\"},"
+              - generic [ref=e450]: "{\"label\": \"Aquaman\"}"
+              - generic [ref=e451]: "])"
+              - generic [ref=e452]: selected_count = page.locator("#heroSelect option:checked").count()
+              - generic [ref=e453]: assert selected_count == 2
+              - button "Copy code" [ref=e454] [cursor=pointer]
+          - blockquote [ref=e456]:
+            - paragraph [ref=e457]:
+              - text: 📄
+              - strong [ref=e458]: "Also Read:"
+              - link "Top 10 Best Automation Practice Website" [ref=e459] [cursor=pointer]:
+                - /url: https://www.qaplayground.com/blog/top-10-best-automation-practice-website
+      - generic [ref=e460]:
+        - generic [ref=e461]:
+          - img [ref=e462]
+          - heading "Frequently Asked Questions" [level=2] [ref=e465]
+        - generic [ref=e466]:
+          - heading "How do I select a dropdown option by visible text using Selenium WebDriver?" [level=3] [ref=e468]:
+            - button "How do I select a dropdown option by visible text using Selenium WebDriver?" [ref=e469] [cursor=pointer]:
+              - text: How do I select a dropdown option by visible text using Selenium WebDriver?
+              - img [ref=e470]
+          - heading "How do I select a dropdown option by its value attribute in Selenium?" [level=3] [ref=e473]:
+            - button "How do I select a dropdown option by its value attribute in Selenium?" [ref=e474] [cursor=pointer]:
+              - text: How do I select a dropdown option by its value attribute in Selenium?
+              - img [ref=e475]
+          - heading "How do I get all available options from a dropdown in Playwright or Selenium?" [level=3] [ref=e478]:
+            - button "How do I get all available options from a dropdown in Playwright or Selenium?" [ref=e479] [cursor=pointer]:
+              - text: How do I get all available options from a dropdown in Playwright or Selenium?
+              - img [ref=e480]
+          - heading "How do I handle a native HTML multi-select element in Selenium WebDriver?" [level=3] [ref=e483]:
+            - button "How do I handle a native HTML multi-select element in Selenium WebDriver?" [ref=e484] [cursor=pointer]:
+              - text: How do I handle a native HTML multi-select element in Selenium WebDriver?
+              - img [ref=e485]
+          - heading "How do I select multiple options in a multi-select dropdown with Playwright?" [level=3] [ref=e488]:
+            - button "How do I select multiple options in a multi-select dropdown with Playwright?" [ref=e489] [cursor=pointer]:
+              - text: How do I select multiple options in a multi-select dropdown with Playwright?
+              - img [ref=e490]
+          - heading "What is the difference between selectByVisibleText, selectByValue, and selectByIndex in Selenium?" [level=3] [ref=e493]:
+            - button "What is the difference between selectByVisibleText, selectByValue, and selectByIndex in Selenium?" [ref=e494] [cursor=pointer]:
+              - text: What is the difference between selectByVisibleText, selectByValue, and selectByIndex in Selenium?
+              - img [ref=e495]
+  - region "Notifications alt+T"
+  - contentinfo [ref=e497]:
+    - contentinfo "Site footer" [ref=e498]:
+      - generic [ref=e499]:
+        - text: Footer Navigation
+        - generic [ref=e500]:
+          - generic [ref=e501]:
+            - link "QA PlayGround" [ref=e502] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e503]: QA PlayGround
+            - paragraph [ref=e504]: A purpose-built practice platform for QA automation engineers. Learn Selenium, Playwright, and Cypress through hands-on interactive elements and real-world scenarios.
+            - generic [ref=e505]:
+              - generic [ref=e506]:
+                - img [ref=e507]
+                - text: Practice Elements
+              - generic [ref=e512]:
+                - img [ref=e513]
+                - text: Bank Demo
+              - generic [ref=e515]:
+                - img [ref=e516]
+                - text: Study Tracker
+            - generic "Social media links" [ref=e518]:
+              - link "YouTube" [ref=e519] [cursor=pointer]:
+                - /url: https://www.youtube.com/@qaplayground
+                - img [ref=e520]
+              - link "GitHub" [ref=e522] [cursor=pointer]:
+                - /url: https://github.com/kundalik-dev
+                - img [ref=e523]
+              - link "LinkedIn" [ref=e525] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/kundalik-jadhav
+                - img [ref=e526]
+              - link "Twitter" [ref=e528] [cursor=pointer]:
+                - /url: https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.qaplayground.com
+                - img [ref=e529]
+              - link "Telegram" [ref=e531] [cursor=pointer]:
+                - /url: https://t.me/share/url?url=https%3A%2F%2Fwww.qaplayground.com
+                - img [ref=e532]
+          - generic [ref=e534]:
+            - paragraph [ref=e535]: Platform
+            - navigation "Platform links" [ref=e536]:
+              - link "Practice Elements 22+ elements" [ref=e537] [cursor=pointer]:
+                - /url: /practice
+                - img [ref=e539]
+                - generic [ref=e544]:
+                  - text: Practice Elements
+                  - generic [ref=e545]: 22+ elements
+              - link "Bank Demo App E2E testing" [ref=e546] [cursor=pointer]:
+                - /url: /bank
+                - img [ref=e548]
+                - generic [ref=e550]:
+                  - text: Bank Demo App
+                  - generic [ref=e551]: E2E testing
+              - link "Study Tracker New" [ref=e552] [cursor=pointer]:
+                - /url: /study-tracker/dashboard
+                - img [ref=e554]
+                - generic [ref=e556]:
+                  - text: Study Tracker
+                  - generic [ref=e557]: New
+              - link "QA Tools Free" [ref=e558] [cursor=pointer]:
+                - /url: /qa-tools
+                - img [ref=e560]
+                - generic [ref=e562]:
+                  - text: QA Tools
+                  - generic [ref=e563]: Free
+              - link "QA Playground Bot Free" [ref=e564] [cursor=pointer]:
+                - /url: https://t.me/QAPlayGround_Bot
+                - img [ref=e566]
+                - generic [ref=e568]:
+                  - text: QA Playground Bot
+                  - generic [ref=e569]: Free
+              - link "QA Capture Extension" [ref=e570] [cursor=pointer]:
+                - /url: https://chromewebstore.google.com/detail/jhgkhnokloeklnagbkgkgcfphafifefg?utm_source=item-share-cb
+                - img [ref=e572]
+                - generic [ref=e577]:
+                  - text: QA Capture
+                  - generic [ref=e578]: Extension
+              - link "QA Playground Clipper Extension" [ref=e579] [cursor=pointer]:
+                - /url: https://chromewebstore.google.com/detail/jegdkegbomfbmhhimfjgacdblcoodfpd?utm_source=item-share-cb
+                - img [ref=e581]
+                - generic [ref=e586]:
+                  - text: QA Playground Clipper
+                  - generic [ref=e587]: Extension
+          - generic [ref=e588]:
+            - paragraph [ref=e589]: Learn
+            - navigation "Learn links" [ref=e590]:
+              - link "Practice Elements" [ref=e591] [cursor=pointer]:
+                - /url: /practice
+              - link "Blog & Tutorials" [ref=e592] [cursor=pointer]:
+                - /url: /blog
+              - link "Free QA Tools" [ref=e593] [cursor=pointer]:
+                - /url: /qa-tools
+              - link "AI Syllabus Generator" [ref=e594] [cursor=pointer]:
+                - /url: /study-tracker/ai-syllabus-prompt
+              - link "Automation Framework" [ref=e595] [cursor=pointer]:
+                - /url: https://github.com/kundalik5545/QA_PlayGround_Automation_Framework
+          - generic [ref=e596]:
+            - paragraph [ref=e597]: Company
+            - navigation "Company links" [ref=e598]:
+              - link "About Us" [ref=e599] [cursor=pointer]:
+                - /url: /about-us
+              - link "Contact Us" [ref=e600] [cursor=pointer]:
+                - /url: /contact-us
+              - link "Raise an Issue" [ref=e601] [cursor=pointer]:
+                - /url: /raise-issue
+              - link "Privacy Policy" [ref=e602] [cursor=pointer]:
+                - /url: /privacy-policy
+              - link "Login" [ref=e603] [cursor=pointer]:
+                - /url: /login
+            - generic [ref=e604]:
+              - paragraph [ref=e605]: "*No account required. Creating a login is entirely optional and is only necessary if you wish to sync your progress in the Study Tracker."
+              - paragraph [ref=e606]: "*Your data is stored locally within your browser for maximum privacy."
+        - generic [ref=e607]:
+          - generic [ref=e608]: © 2026 QA Playground. All rights reserved.
+          - generic [ref=e609]:
+            - text: Built for QA Engineers by
+            - link "Kundalik Jadhav" [ref=e610] [cursor=pointer]:
+              - /url: https://github.com/kundalik-dev
+  - alert [ref=e611]
+```
